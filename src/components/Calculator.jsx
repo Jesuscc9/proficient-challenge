@@ -17,7 +17,7 @@ export const Calculator = () => {
         </p>
       </div>
       <div className="flex flex-col gap-14 mt-10">
-        <div className="flex gap-20">
+        <div className="flex flex-wrap justify-center gap-20">
           {data.items.map((item) => {
             return (
               <div key={item.id} className="text-sm">
