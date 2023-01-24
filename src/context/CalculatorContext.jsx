@@ -25,7 +25,8 @@ const initialValues = {
   items: initialItems,
   setItems: () => {},
   handleDecrease: (item) => {},
-  handleIncrease: (item) => {}
+  handleIncrease: (item) => {},
+  handleClear: () => {}
 }
 
 const MINIMUM_AMOUNT = 0
@@ -61,11 +62,17 @@ export const CalculatorProvider = ({ children }) => {
     setItems(newItems)
   }
 
+  const handleClear = () => {
+    const newItems = items.map((e) => ({ ...e, amount: 0 }))
+    setItems(newItems)
+  }
+
   const contextValues = {
     items,
     setItems,
     handleDecrease,
-    handleIncrease
+    handleIncrease,
+    handleClear
   }
 
   return (
