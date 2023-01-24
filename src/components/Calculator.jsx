@@ -2,9 +2,10 @@ import React from "react"
 import { useCalculator } from "../context"
 
 export const Calculator = () => {
-  const { items, handleIncrease, handleDecrease, handleClear } = useCalculator()
+  const { handleIncrease, handleDecrease, handleClear, ...data } =
+    useCalculator()
 
-  console.log({ items })
+  console.log({ items: data.items })
 
   return (
     <div className="p-20">
@@ -17,7 +18,7 @@ export const Calculator = () => {
       </div>
       <div className="flex flex-col gap-14 mt-10">
         <div className="flex gap-20">
-          {items.map((item) => {
+          {data.items.map((item) => {
             return (
               <div key={item.id} className="text-sm">
                 <div className="shadow-lg flex flex-col items-center justify-center gap-3 w-[220px] h-[220px]">
@@ -53,6 +54,35 @@ export const Calculator = () => {
         >
           Clear
         </button>
+      </div>
+      <div className="m-auto">
+        <h1 className="text-2xl mt-6 text-center">Summary</h1>
+        <div className="bg-gray-100 p-6 mt-6 m-auto w-[400px] max-w-full">
+          <div className="flex">
+            <p className="w-full">Total items</p>
+            <p className="w-[100px]">{data.totalItems}</p>
+          </div>
+          <div className="flex">
+            <p className="w-full">Total M2</p>
+            <p className="w-[100px]">{data.totalMeters}</p>
+          </div>
+          <div className="flex">
+            <p className="w-full">Subtotal</p>
+            <p className="w-[100px]">${data.subtotal}</p>
+          </div>
+          <div className="flex">
+            <p className="w-full">Tax</p>
+            <p className="w-[100px]">${data.tax}</p>
+          </div>
+          <div className="flex">
+            <p className="w-full font-bold">Total</p>
+            <p className="w-[100px] font-bold">${data.total}</p>
+          </div>
+          <div className="flex">
+            <p className="w-full font-bold">Due today 50%</p>
+            <p className="w-[100px] font-bold">${data.total / 2}</p>
+          </div>
+        </div>
       </div>
     </div>
   )

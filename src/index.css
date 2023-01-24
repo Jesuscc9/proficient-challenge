@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-weight: 300;
+}
+
+table th {
+  font-weight: 300;
+}

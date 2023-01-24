@@ -1,32 +1,17 @@
 import React, { createContext, useContext, useState } from "react"
-import BedIcon from "../assets/beds.png"
-import RefrigeratorIcon from "../assets/refrigerator.png"
-
-const initialItems = [
-  {
-    slug: "beds",
-    label: "Beds",
-    image: BedIcon,
-    price: 1.2,
-    id: 1,
-    amount: 0
-  },
-  {
-    id: 2,
-    slug: "refri",
-    label: "Refrigerator",
-    image: RefrigeratorIcon,
-    price: 5.1,
-    amount: 0
-  }
-]
+import { initialItems } from "./items"
 
 const initialValues = {
   items: initialItems,
   setItems: () => {},
   handleDecrease: (item) => {},
   handleIncrease: (item) => {},
-  handleClear: () => {}
+  handleClear: () => {},
+  totalItems: 0,
+  totalMeters: 0,
+  subtotal: 0,
+  tax: 0,
+  total: 0
 }
 
 const MINIMUM_AMOUNT = 0
@@ -67,12 +52,29 @@ export const CalculatorProvider = ({ children }) => {
     setItems(newItems)
   }
 
+  const totalItems = items.reduce((acc, val) => acc + val.amount, 0)
+
+  const totalMeters = items
+    .reduce((acc, val) => acc + val.amount * val.meters, 0)
+    .toFixed(2)
+
+  const subtotal = Number((totalMeters * 200).toFixed(2))
+
+  const tax = Number((subtotal * 0.16).toFixed(2))
+
+  const total = Number((subtotal + tax).toFixed(2))
+
   const contextValues = {
     items,
     setItems,
     handleDecrease,
     handleIncrease,
-    handleClear
+    handleClear,
+    totalItems,
+    totalMeters,
+    subtotal,
+    tax,
+    total
   }
 
   return (
