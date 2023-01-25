@@ -9,11 +9,11 @@ export const Footer = () => {
     <footer className="mt-52 px-20 sm:px-10 md:px-20 lg:px-36 xl:px-56 2xl:px-72 py-12 sm:py-20 flex flex-wrap justify-between bg-orange-400 text-white gap-y-12 sm:gap-y-20 flex-col text-center sm:text-left sm:flex-row">
       <div className="m-auto sm:m-0">
         <img src={HouseIcon} alt="" className="w-auto h-[88px] m-auto sm:m-0" />
-        <p className="w-[250px] my-4">
+        <p className="w-[250px] mt-5">
           It is a long established fact that a reader will be distracted by the
           readable content of a page whenters.
         </p>
-        <div className="mt-4 sm:mt-10 flex gap-3 sm:justify-start justify-center">
+        <div className="mt-4 sm:mt-9 flex gap-3 sm:justify-start justify-center">
           <div className="p-2 border-2 border-white rounded-full">
             <img src={TwitterIcon} alt="" />
           </div>
