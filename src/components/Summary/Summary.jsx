@@ -6,7 +6,7 @@ export const Summary = () => {
   return (
     <div className="m-auto">
       <h1 className="text-3xl mt-6 text-center">Summary</h1>
-      <div className="flex flex-col gap-4 bg-gray-100 p-8 mt-6 m-auto w-[400px] max-w-full">
+      <div className="flex flex-col gap-4 bg-gray-100 p-8 mt-6 m-auto w-[400px] max-w-full text-black dark:bg-gray-700 dark:text-white">
         <div className="flex">
           <p className="w-full">Total items</p>
           <p className="w-[100px]">{totalItems}</p>

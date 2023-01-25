@@ -16,7 +16,7 @@ export const Calculator = () => {
       <div className="flex flex-col gap-14 mt-10">
         <Items />
         <button
-          className="border border-orange-400 hover:text-white hover:bg-orange-400 px-10 py-3 w-min rounded-md   "
+          className="border border-orange-400 hover:text-white hover:bg-orange-400 px-10 py-3 w-min rounded-md transition-colors"
           onClick={handleClear}
         >
           Clear
