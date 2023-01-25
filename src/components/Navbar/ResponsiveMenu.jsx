@@ -14,13 +14,13 @@ export const ResponsiveMenu = () => {
   }, [showMenu])
 
   useEffect(() => {
-    const handleEscPress = (e) => {
-      if (e.code === "Escape") setShowMenu(false)
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setShowMenu(false)
     }
 
-    document.addEventListener("keydown", handleEscPress)
+    window.addEventListener("keydown", handleEsc)
 
-    return document.removeEventListener("keydown", handleEscPress)
+    return () => window.removeEventListener("keydown", handleEsc)
   }, [])
 
   return (
