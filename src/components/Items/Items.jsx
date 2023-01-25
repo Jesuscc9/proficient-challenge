@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { useCalculator } from "../context"
+import { useCalculator } from "../../context"
 
 export const Items = () => {
   const { items } = useCalculator()

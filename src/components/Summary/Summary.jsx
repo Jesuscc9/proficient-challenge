@@ -1,4 +1,4 @@
-import { useCalculator } from "../context"
+import { useCalculator } from "../../context"
 
 export const Summary = () => {
   const { totalItems, totalMeters, subtotal, tax, total } = useCalculator()

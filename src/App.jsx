@@ -1,4 +1,3 @@
-import React from "react"
 import { Calculator, Navbar } from "./components"
 import { CalculatorProvider } from "./context"
 
