@@ -5,7 +5,7 @@ export const Items = () => {
   const { items } = useCalculator()
 
   return (
-    <div className="flex flex-wrap justify-between gap-8 mt-20">
+    <div className="flex flex-wrap justify-center sm:justify-between gap-8 mt-20">
       {items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
@@ -17,7 +17,7 @@ export const Item = ({ item }) => {
   const { handleDecrease, handleIncrease } = useCalculator()
 
   return (
-    <div key={item.id} className="text-sm">
+    <article key={item.id} className="text-sm">
       <div className="shadow-lg flex flex-col items-center justify-center gap-3 w-[220px] h-[220px]">
         <img src={item.image} alt="" />
         <p>{item.label}</p>
@@ -39,7 +39,7 @@ export const Item = ({ item }) => {
           +
         </button>
       </div>
-    </div>
+    </article>
   )
 }
 

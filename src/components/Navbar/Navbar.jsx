@@ -1,4 +1,5 @@
 import HomeIcon from "../../assets/house.png"
+import { MenuItems } from "./MenuItems"
 import { ResponsiveMenu } from "./ResponsiveMenu"
 
 export const Navbar = () => {
@@ -9,18 +10,11 @@ export const Navbar = () => {
           <img src={HomeIcon} className="w-10 md:w-16 lg:w-[84px]" alt="" />
         </div>
         <div className="hidden sm:flex gap-6 sm:gap-10 lg:gap-12 text-sm items-center">
-          <a href="/" className="hover:underline">
-            How We Work
-          </a>
-          <a href="/" className="hover:underline">
-            Services
-          </a>
-          <a href="/" className="hover:underline">
-            Free Quote
-          </a>
-          <a href="/" className="hover:underline">
-            Contact
-          </a>
+          {MenuItems.map((e, i) => (
+            <a href={e.path} key={i} className="hover:underline">
+              {e.label}
+            </a>
+          ))}
         </div>
         <div className="flex sm:hidden">
           <ResponsiveMenu />

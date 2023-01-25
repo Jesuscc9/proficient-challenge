@@ -1,22 +1,45 @@
 import { AnimatePresence, motion } from "framer-motion"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { MenuItems } from "./MenuItems"
+import "./Navbar.css"
 
 export const ResponsiveMenu = () => {
   const [showMenu, setShowMenu] = useState(false)
 
   const handleClick = () => setShowMenu(!showMenu)
 
+  useEffect(() => {
+    const bodyOverflow = showMenu ? "hidden" : "auto"
+    document.body.style.overflow = bodyOverflow
+  }, [showMenu])
+
+  useEffect(() => {
+    const handleEscPress = (e) => {
+      if (e.code === "Escape") setShowMenu(false)
+    }
+
+    document.addEventListener("keydown", handleEscPress)
+
+    return document.removeEventListener("keydown", handleEscPress)
+  }, [])
+
   return (
     <>
-      <button onClick={handleClick}>{showMenu ? "Cerrar" : "Mostrar"}</button>
+      <button onClick={handleClick}>
+        <div id="nav-icon3" className={showMenu ? "open" : null}>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
       <AnimatePresence>
         {showMenu ? (
           <motion.div
             initial={{ opacity: 0, top: 78 }}
             animate={{ opacity: 1, top: 88 }}
             exit={{ opacity: 0, top: 98 }}
-            className="flex flex-col items-center gap-10 text-xl absolute z-10 left-0 bg-white h-screen w-screen text-orange-400 pt-8"
+            className="flex flex-col items-center gap-10 text-2xl fixed z-10 left-0 bg-white h-screen w-screen text-orange-400 pt-8 mt-12"
           >
             {MenuItems.map((e, i) => (
               <motion.a
