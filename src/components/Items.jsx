@@ -24,7 +24,7 @@ export const Item = ({ item }) => {
       </div>
       <div className="flex h-[50px] mt-6">
         <button
-          className="min-w-[41px] bg-gray-200"
+          className="min-w-[41px] bg-gray-200 rounded-l-md"
           onClick={() => handleDecrease(item)}
         >
           -
@@ -33,7 +33,7 @@ export const Item = ({ item }) => {
           {item.amount}
         </span>
         <button
-          className="min-w-[41px] bg-gray-200"
+          className="min-w-[41px] bg-gray-200 rounded-r-md"
           onClick={() => handleIncrease(item)}
         >
           +
