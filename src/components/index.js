@@ -1,4 +1,5 @@
 export * from "./Calculator"
+export * from "./Footer"
 export * from "./Items"
 export * from "./Navbar"
 export * from "./Summary"

@@ -5,7 +5,7 @@ export const Items = () => {
   const { items } = useCalculator()
 
   return (
-    <div className="flex flex-wrap justify-center gap-8">
+    <div className="flex flex-wrap justify-between gap-8 mt-20">
       {items.map((item) => (
         <Item key={item.id} item={item} />
       ))}
