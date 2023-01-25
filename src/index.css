@@ -8,3 +8,7 @@ body {
   font-weight: 300;
   font-family: "Poppins", sans-serif;
 }
+
+.custom-shadow {
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.08);
+}

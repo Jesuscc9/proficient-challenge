@@ -18,7 +18,7 @@ export const Item = ({ item }) => {
 
   return (
     <article key={item.id} className="text-sm">
-      <div className="shadow-lg flex flex-col items-center justify-center gap-3 w-[220px] h-[220px]">
+      <div className="custom-shadow flex flex-col items-center justify-center gap-3 w-[220px] h-[220px]">
         <img src={item.image} alt="" />
         <p>{item.label}</p>
       </div>
