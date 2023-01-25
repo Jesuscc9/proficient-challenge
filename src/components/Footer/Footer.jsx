@@ -26,27 +26,45 @@ export const Footer = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-2xl">About Us</h3>
-        <div className="m-4 sm:mt-20 flex flex-col gap-2 sm:gap-6">
-          <p>About</p>
-          <p>Privacy & Policy</p>
-          <p>Terms & Conditions</p>
-          <p>Faq</p>
+        <h3 className="text-xl">About Us</h3>
+        <div className="sm:mt-20 flex flex-col gap-2 sm:gap-6">
+          <a className="hover:underline" href="/">
+            About
+          </a>
+          <a className="hover:underline" href="/">
+            Privacy & Policy
+          </a>
+          <a className="hover:underline" href="/">
+            Terms & Conditions
+          </a>
+          <a className="hover:underline" href="/">
+            Faq
+          </a>
         </div>
       </div>
       <div>
-        <h3 className="text-2xl">Navigate</h3>
-        <div className="m-4 sm:mt-20 flex flex-col gap-2 sm:gap-6">
-          <p>How We Work</p>
-          <p>Services</p>
-          <p>Faq</p>
-          <p>Contact</p>
-          <p>Free quote</p>
+        <h3 className="text-xl">Navigate</h3>
+        <div className="sm:mt-20 flex flex-col gap-2 sm:gap-6">
+          <a className="hover:underline" href="/">
+            How We Work
+          </a>
+          <a className="hover:underline" href="/">
+            Services
+          </a>
+          <a className="hover:underline" href="/">
+            Faq
+          </a>
+          <a className="hover:underline" href="/">
+            Contact
+          </a>
+          <a className="hover:underline" href="/">
+            Free quote
+          </a>
         </div>
       </div>
       <div>
-        <h3 className="text-2xl">Contact Us</h3>
-        <div className="m-4 sm:mt-20 flex flex-col gap-2 sm:gap-6">
+        <h3 className="text-xl">Contact Us</h3>
+        <div className="sm:mt-20 flex flex-col gap-2 sm:gap-6">
           <p>Ricardo Margain 444</p>
           <p>Call: +52 81 1234 5678</p>
           <p>Email: info@challenge.com</p>
