@@ -8,7 +8,7 @@ export const Calculator = () => {
     <section className="py-10 px-10 sm:px-20 md:px-20 lg:px-40 xl:px-52 2xl:px-[332px] mt-20">
       <div className="flex flex-col gap-10">
         <h1 className="text-center text-4xl">What items to store?</h1>
-        <p className="m-auto text-center w-auto sm:w-[453px] text-sm">
+        <p className="m-auto text-center w-auto sm:w-[420px] text-sm">
           Select which items you wish to store before moving to your new home.
           Well keep em safe!
         </p>
